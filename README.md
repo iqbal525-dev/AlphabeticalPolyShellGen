@@ -12,6 +12,14 @@
 * A **second shellcode** is _dynamically generated_ using the [GenerateRandomVariant](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalPolyGen/PolyShellcodeGen.h#L298C6-L298C27) function. This shellcode is responsible for decoding and passing code execution to `g_AlphabeticalDecoder`, which decodes the Alphabetical shellcode and executes it, alongside performing necessary memory cleanup logic.
 
 
+</br>
+
+> [!NOTE]
+> The logic behind the `g_AlphabeticalDecoder` shellcode is located in the [AlphabeticalShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalShellcodeDecode.asm) file.
+> 
+> The logic behind the XOR decoder shellcode is located in the [XorShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/XorShellcodeDecode.asm) file,.
+ 
+
 
 </br>
 
