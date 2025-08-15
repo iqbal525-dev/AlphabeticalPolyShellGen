@@ -57,6 +57,6 @@ LocalShellcodeExec.exe --i <Encoded Shellcode To Execute>
 
 </br>
 
-### 3. Utilizing the [LocalShellcodeExec.exe](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/tree/main/LocalShellcodeExec) for testing:
+### 3. Utilizing [LocalShellcodeExec.exe](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/tree/main/LocalShellcodeExec) for testing:
 
 <img width="1557" height="547" alt="Screenshot 2025-08-14 185200" src="https://github.com/user-attachments/assets/983ea399-becd-476d-a3b7-745a69af1121" />
