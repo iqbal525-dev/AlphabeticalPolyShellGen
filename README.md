@@ -17,7 +17,7 @@
 > [!NOTE]
 > The logic behind the `g_AlphabeticalDecoder` shellcode is located in the [AlphabeticalShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalShellcodeDecode.asm) file.
 > 
-> The logic behind the XOR decoder shellcode is located in the [XorShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/XorShellcodeDecode.asm) file,.
+> The logic behind the XOR decoder shellcode is located in the [XorShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/XorShellcodeDecode.asm) file.
  
 
 
